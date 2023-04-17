@@ -34,15 +34,15 @@ class AppFixtures extends Fixture
         MakeFactory::createOne(['name' => 'Sony']);
 
         PhoneFactory::createOne([
-            'model' => 'iPhone X',
-            'memory' => '128',
-            'manufacturer' => MakeFactory::find(['name' => 'Apple']),
+            'Brand' => 'iPhone X',
+            'Price' => '128',
+            'Size' => MakeFactory::find(['name' => 'Apple']),
         ]);
 
         PhoneFactory::createOne([
-            'model' => 'Galaxy 21',
-            'memory' => '256',
-            'manufacturer' => MakeFactory::find(['name' => 'Samsung']),
+            'Brand' => 'Galaxy 21',
+            'Price' => '256',
+            'Size' => MakeFactory::find(['name' => 'Samsung']),
         ]);
 
         $blanchCampus = CampusFactory::createOne(['location' => 'Blanchardstown']);

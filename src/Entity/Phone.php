@@ -14,51 +14,51 @@ class Phone
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Model = null;
+    private ?string $Brand = null;
 
     #[ORM\Column]
-    private ?int $memory = null;
+    private ?int $Price = null;
 
     #[ORM\ManyToOne(inversedBy: 'phones')]
-    private ?Make $manufacturer = null;
+    private ?Make $Size = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getModel(): ?string
+    public function getBrand(): ?string
     {
-        return $this->Model;
+        return $this->Brand;
     }
 
-    public function setModel(string $Model): self
+    public function setBrand(string $Brand): self
     {
-        $this->Model = $Model;
+        $this->Brand = $Brand;
 
         return $this;
     }
 
-    public function getMemory(): ?int
+    public function getPrice(): ?int
     {
-        return $this->memory;
+        return $this->Price;
     }
 
-    public function setMemory(int $memory): self
+    public function setPrice(int $Price): self
     {
-        $this->memory = $memory;
+        $this->Price = $Price;
 
         return $this;
     }
 
-    public function getManufacturer(): ?Make
+    public function getSize(): ?Make
     {
-        return $this->manufacturer;
+        return $this->Size;
     }
 
-    public function setManufacturer(?Make $manufacturer): self
+    public function setSize(?Make $Size): self
     {
-        $this->manufacturer = $manufacturer;
+        $this->Size = $Size;
 
         return $this;
     }

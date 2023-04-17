@@ -12,9 +12,9 @@ class PhoneType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('Model')
-            ->add('memory')
-            ->add('manufacturer')
+            ->add('Brand')
+            ->add('Price')
+            ->add('Size')
         ;
     }
 

@@ -9,9 +9,9 @@
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Model</th>
-                <th>Memory</th>
-                <th>Manufacturer</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>Size</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -19,10 +19,10 @@
         {% for phone in phones %}
             <tr>
                 <td>{{ phone.id }}</td>
-                <td>{{ phone.Model }}</td>
-                <td>{{ phone.memory }}</td>
+                <td>{{ phone.Brand }}</td>
+                <td>{{ phone.Price }}</td>
                 <td>
-                    <a href="{{ path('app_make_show', {'id': phone.manufacturer.id}) }}">{{ phone.manufacturer.name }}</a>
+                    <a href="{{ path('app_make_show', {'id': phone.Size.id}) }}">{{ phone.Size.name }}</a>
 
 
                 </td>

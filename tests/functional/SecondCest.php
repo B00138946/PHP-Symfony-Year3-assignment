@@ -14,7 +14,7 @@ class SecondCest
     {
         $validatorAvailableStatus = false;
         try{
-            $url = '/make';
+            $url = '/product';
             $I->amOnPage($url);
             $I->validateMarkup(['ignoreWarnings' => false]);
 
@@ -29,7 +29,7 @@ class SecondCest
     #[Depends('validatorAvailable')]
     public function web1_01_pageValidHtmlNoErrors_Home(FunctionalTester $I)
     {
-        $url = '/make';
+        $url = '/product';
         $I->amOnPage($url);
         $I->validateMarkup(['ignoreWarnings' => false]);
         $I->seeResponseCodeIs(HttpCode::OK);
@@ -40,7 +40,7 @@ class SecondCest
     #[Depends('validatorAvailable')]
     public function web1_02_page2ValidHtmlNoErrors_Home(FunctionalTester $I)
     {
-        $url = '/phone';
+        $url = '/productDetails';
         $I->amOnPage($url);
         $I->validateMarkup(['ignoreWarnings' => false]);
         $I->seeResponseCodeIs(HttpCode::OK);

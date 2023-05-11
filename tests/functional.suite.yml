@@ -1,7 +1,7 @@
 # Codeception Test Suite Configuration
 #
 # Suite for functional tests
-# Emulate web requests and make application process them
+# Emulate web requests and product application process them
 # Include one of framework modules (Symfony2, Yii2, Laravel5) to use it
 # Remove this suite if you don't use frameworks
 

@@ -22,6 +22,8 @@ class ProductDetails
     #[ORM\ManyToOne(inversedBy: 'phones')]
     private ?Product $ClothingName = null;
 
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -62,4 +64,6 @@ class ProductDetails
 
         return $this;
     }
+
+
 }

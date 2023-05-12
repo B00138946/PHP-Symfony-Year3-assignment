@@ -15,6 +15,7 @@ class ProductDetailsType extends AbstractType
             ->add('Brand')
             ->add('Price')
             ->add('ClothingName')
+
         ;
     }
 

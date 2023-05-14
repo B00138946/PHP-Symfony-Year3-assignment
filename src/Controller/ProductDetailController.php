@@ -5,10 +5,12 @@ namespace App\Controller;
 use App\Entity\ProductDetails;
 use App\Form\ProductDetailsType;
 use App\Repository\ProductDetailsRepository;
+use Psy\Readline\Hoa\FileException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+
 
 #[Route('/productDetails')]
 class ProductDetailController extends AbstractController
@@ -30,6 +32,7 @@ class ProductDetailController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $productDetailsRepository->save($productDetails, true);
+
 
             return $this->redirectToRoute('app_productDetails_index', [], Response::HTTP_SEE_OTHER);
         }

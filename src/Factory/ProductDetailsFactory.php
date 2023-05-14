@@ -47,8 +47,8 @@ final class ProductDetailsFactory extends ModelFactory
     protected function getDefaults(): array
     {
         return [
-            'Model' => self::faker()->text(255),
-            'memory' => self::faker()->randomNumber(),
+            'Brand' => self::faker()->text(255),
+            'Price' => self::faker()->randomNumber(),
         ];
     }
 

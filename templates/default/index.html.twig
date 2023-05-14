@@ -21,11 +21,56 @@
                 background-color: black;
                 color: lightskyblue;
             }
+
+            shoppingC a:link, a:visited {
+                background-color: darkblue;
+                color: white;
+                border: 2px black;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                border-radius: 12px;
+                float: right;
+            }
+            shoppingC a:hover, a:active {
+                background-color: black;
+                color: lightskyblue;
+            }
+
+
+
         </style>
 
+        <a href="{{ path('shoppingCart')  }}" class="shoppingC">
+            Shopping cart</a>
 
+        <a href="{{ url('app_user_index') }}">
+            LOG IN
+        </a>
 
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Clothing Name</th>
+                <th>Brand</th>
+                <th>Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for productDetails in productDetailss %}
+                <tr>
+                    <td>{{ productDetails.ClothingName }}</td>
+                    <td>{{ productDetails.Brand }}</td>
+                    <td>{{ productDetails.Price }}</td>
 
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
 
-        <img src="{{ asset('Images/nikes.png') }}" alt="Image Description">
     {% endblock %}

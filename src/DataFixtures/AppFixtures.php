@@ -9,23 +9,34 @@ use App\Factory\UserFactory;
 use App\Factory\ProductDetailsFactory;
 use App\Factory\ProductFactory;
 
-use App\Factory\CampusFactory;
-use App\Factory\StudentFactory;
+
 
 class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager): void
     {
         UserFactory::createOne([
-            'username' => 'matt',
-            'password' => 'smith',
+            'username' => 'Disi',
+            'password' => 'Disi',
             'role' => 'ROLE_ADMIN'
         ]);
 
         UserFactory::createOne([
-            'username' => 'Disi44',
-            'password' => 'disidisi',
+            'username' => 'Manager',
+            'password' => 'Manager',
             'role' => 'ROLE_ADMIN'
+        ]);
+
+        UserFactory::createOne([
+            'username' => 'Jack',
+            'password' => 'Jack',
+            'role' => 'ROLE_USER'
+        ]);
+
+        UserFactory::createOne([
+            'username' => 'User',
+            'password' => 'User',
+            'role' => 'ROLE_USER'
         ]);
 
 

@@ -15,6 +15,27 @@
     {% endif %}
 
     <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <style>
+        a:link, a:visited {
+            background-color: darkblue;
+            color: white;
+            border: 2px black;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border-radius: 12px;
+        }
+
+        a:hover, a:active {
+            background-color: black;
+            color: lightskyblue;
+        }
+        h1 {
+            color: darkblue;
+        }
+    </style>
+
     <label for="inputUsername">Username</label>
     <input type="text" value="{{ last_username }}" name="username" id="inputUsername" class="form-control" autocomplete="username" required autofocus>
     <label for="inputPassword">Password</label>

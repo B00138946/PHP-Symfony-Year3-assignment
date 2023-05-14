@@ -16,13 +16,15 @@ class ProductDetails
     #[ORM\Column(length: 255)]
     private ?string $Brand = null;
 
+
+   // #[ORM\Column(length: 255)]
+   // private ?string $imagePath = null;
+
     #[ORM\Column]
     private ?float $Price = null;
 
-    #[ORM\ManyToOne(inversedBy: 'phones')]
+    #[ORM\ManyToOne(inversedBy: 'productDetailss')]
     private ?Product $ClothingName = null;
-
-
 
     public function getId(): ?int
     {
@@ -65,5 +67,17 @@ class ProductDetails
         return $this;
     }
 
+
+   /* public function getImagePath(): ?string
+    {
+        return $this->imagePath;
+    }
+
+    public function setImagePath(string $imagePath): self
+    {
+        $this->imagePath = $imagePath;
+
+        return $this;
+    }*/
 
 }

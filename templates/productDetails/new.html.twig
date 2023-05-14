@@ -23,16 +23,7 @@
     </style>
 
     {{ include('productDetails/_form.html.twig') }}
-    {{ form_start(form) }}
-    {# ... #}
 
-    {{ form_row(form.ImageUpload) }}
-    {{ form_end(form) }}
-
-    <input
-    type="file"
-    name="image"
-    class="hidden">
 
     <a href="{{ path('app_productDetails_index') }}">back to list</a>
 {% endblock %}

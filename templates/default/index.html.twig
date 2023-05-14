@@ -1,11 +1,19 @@
 {% extends 'base.html.twig' %}
     {% block title %}My Great Website - home page{% endblock %}
     {% block body %}
-        <h1>Online Clothing Home page</h1>
+        <h1>Online Store Home page</h1>
         <p>
-            welcome to my great website !
+            Welcome to the Online Store
         </p>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
         <style>
+            body {
+                background-color: lightskyblue;
+            }
             a:link, a:visited {
                 background-color: darkblue;
                 color: white;
@@ -46,31 +54,28 @@
             Shopping cart</a>
 
         <a href="{{ url('app_user_index') }}">
-            LOG IN
+            Account
         </a>
 
-        <table class="table">
-            <thead>
-            <tr>
-                <th>Clothing Name</th>
-                <th>Brand</th>
-                <th>Price</th>
-            </tr>
-            </thead>
-            <tbody>
-            {% for productDetails in productDetailss %}
-                <tr>
-                    <td>{{ productDetails.ClothingName }}</td>
-                    <td>{{ productDetails.Brand }}</td>
-                    <td>{{ productDetails.Price }}</td>
 
-                </tr>
-            {% else %}
-                <tr>
-                    <td colspan="4">no records found</td>
-                </tr>
-            {% endfor %}
-            </tbody>
-        </table>
+
+
+
+            {% for productDetails in productDetailss %}
+            <div class="container">
+
+                <h2>{{ productDetails.ClothingName }}</h2>
+                <div class="card bg-primary text-white" style="width: 18rem;height: 100%">
+                    <div class="card-body" style>{{ productDetails.Brand }}</div>
+                    <div class="card-body">{{ productDetails.Price }}</div>
+                </div>
+
+                {% else %}
+                    <tr>
+                        <td colspan="4">no records found</td>
+                    </tr>
+                {% endfor %}
+            </div>
+
 
     {% endblock %}

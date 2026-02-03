@@ -19,7 +19,7 @@ symfony serve
 ```
 
 
-## BONUS - setup for testing
+## Setup for testing
 
 If you want to try out some of the tests (in folder `tests`) you'll need to set up the test environment database by doing the follow:
 
